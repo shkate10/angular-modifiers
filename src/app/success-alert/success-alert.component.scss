@@ -1,0 +1,69 @@
+// The class in like a condition( its the parent element of the success-alert component)
+
+//:host-context(.dark) {
+//  .test {
+//    background: #208433;
+//    color: #fff;
+//  }
+//}
+
+// OUTPUT in style tag
+//.darker-success[_nghost-nes-c50]   .test[_ngcontent-nes-c50], .darker-success   [_nghost-nes-c50]   .test[_ngcontent-nes-c50] {
+//  background: #208433;
+//  color: #fff;
+//}
+
+
+
+
+// To access another component - NOT WORKING - NG-DEEP is needed
+
+//:host-context(.darker-success) {
+//  .alert-warning {
+//    background: #9f0f00 !important;
+//  }
+//}
+
+// OUTPUT in style
+//.darker-success[_nghost-pcj-c50]   .alert-warning[_ngcontent-pcj-c50], .darker-success   [_nghost-pcj-c50]   .alert-warning[_ngcontent-pcj-c50] {
+//  background: #9f0f00 !important;
+//}
+
+
+
+// To access the styles to another component
+
+//:host-context(.dark) {
+//  ::ng-deep {
+//    .alert-warning {
+//      background: #9f0f00;
+//      color: #fff;
+//    }
+//  }
+//}
+
+// OUTPUT in style
+//.darker-success[_nghost-dme-c50]     .alert-warning, .darker-success   [_nghost-dme-c50]     .alert-warning {
+//  background: #9f0f00 !important;
+//}
+
+
+
+
+// OR COMBINE TOGETHER
+
+
+:host-context(.dark) {
+
+  .test {
+    background: #208433;
+    color: #fff;
+  }
+
+  ::ng-deep {
+    .alert-warning {
+      background: #9f0f00;
+      color: #fff;
+    }
+  }
+}

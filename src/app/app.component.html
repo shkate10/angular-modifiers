@@ -1,0 +1,85 @@
+<!--<div class="container">-->
+<!--  <div class="row">-->
+<!--    <div class="col-xs-12">-->
+<!--      <ol>-->
+<!--        <li>Create two new Components (manually or with CLI): WarningAlert and SuccessAlert</li>-->
+<!--        <li>Output them beneath each other in the AppComponent</li>-->
+<!--        <li>Output a warning or success message in the Components</li>-->
+<!--        <li>Style the Components appropriately (maybe some red/ green text?)</li>-->
+<!--      </ol>-->
+<!--      <p>Use external or internal templates and styles!</p>-->
+<!--      <p>Feel free to create more components, nest them into each other or play around with different types of-->
+<!--        selectors!</p>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<!--<div class="container-fluid">-->
+<!--  <div class="row">-->
+<!--    <div class="col-xs-8">-->
+<!--      <p class="page-header">My components</p>-->
+<!--      <app-success-alert></app-success-alert>-->
+<!--      <app-warning-alert></app-warning-alert>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+<!--<div class="container">-->
+<!--  <div class="row">-->
+<!--    <div class="col-md-12">-->
+<!--      <app-dialog></app-dialog>-->
+<!--      <app-first-dialog></app-first-dialog>-->
+<!--      <app-second-dialog></app-second-dialog>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+<div class="container-fluid app-container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>Example 1 - ::ng-deep + host selector</h1>
+      <!--      <app-dialog></app-dialog>-->
+      <!--      <app-first-dialog></app-first-dialog>-->
+      <!--      <app-second-dialog></app-second-dialog>-->
+      <h3>First Modal Dialog</h3>
+      <app-first-modal-dialog></app-first-modal-dialog>
+      <h3>Second Modal Dialog</h3>
+      <app-second-modal-dialog></app-second-modal-dialog>
+    </div>
+  </div>
+
+  <br /><br /><br />
+
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>Example 2 - ng-context</h1>
+      <div class="row">
+        <div class="col-xs-6">
+          <app-button [icon]="'pi pi-comment'" label="Comment"></app-button>
+        </div>
+        <div class="col-xs-6 dark">
+          <app-button [icon]="'pi pi-times'" label="Remove"></app-button>
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col-xs-6">
+          <app-success-alert></app-success-alert>
+        </div>
+        <div class="col-xs-6 dark">
+          <app-success-alert></app-success-alert>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br /><br /><br />
+
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>Example 3 - HostBinding + host(.class)</h1>
+      <app-layout-wrapper
+        [alignment]="LayoutWrapper.HORIZONTAL"
+      ></app-layout-wrapper>
+    </div>
+  </div>
+</div>

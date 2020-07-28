@@ -1,0 +1,15 @@
+.container-fluid {
+  padding: 0;
+}
+
+.test {
+  color: #483743;
+}
+
+:host ::ng-deep .test {
+  color: red;
+}
+
+.success-with-class ::ng-deep .test {
+  color: blue;
+}

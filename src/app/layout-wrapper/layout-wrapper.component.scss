@@ -1,0 +1,16 @@
+:host(.host-class) {
+  height: 300px;
+}
+
+:host(.horizontal-container) {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+:host(.vertical-container) {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}

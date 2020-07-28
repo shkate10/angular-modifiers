@@ -1,0 +1,25 @@
+<p-dialog
+          [baseZIndex]="10000"
+          [closable]="closable"
+          [draggable]="false"
+          [modal]="true"
+          [resizable]="false"
+          [responsive]="true"
+          [styleClass]="dialogStyleClass"
+          [(visible)]="display"
+          (onShow)="showDialog()">
+  <p-header>
+    <ng-content select="[app-modal-dialog-header]"></ng-content>
+  </p-header>
+
+  <ng-content select="[app-modal-dialog-body]"></ng-content>
+
+  <p-footer *ngIf="showFooter">
+    <ng-content select="[app-modal-dialog-footer]"></ng-content>
+  </p-footer>
+</p-dialog>
+
+<app-button label="Show"
+            [icon]="'pi pi-info-circle'"
+            (click)="showDialog()">
+</app-button>

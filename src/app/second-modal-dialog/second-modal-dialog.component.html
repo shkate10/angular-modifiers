@@ -1,0 +1,27 @@
+<app-modal-dialog [styleClass]="'second-modal-dialog'"
+                  [closable]="true"
+                  [showFooter]="true">
+  <ng-container app-modal-dialog-header>
+    Second Modal Dialog Header
+  </ng-container>
+  <ng-container app-modal-dialog-body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="alert alert-info p-grid p-align-center p-nogutter">
+            <i class="pi pi-trash mr-10"></i>
+            <span>Are you sure you want to delete?</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+  <ng-container app-modal-dialog-footer>
+    <app-button [icon]="'pi pi-times'" [label]="'No'"></app-button>
+    <app-button [icon]="'pi pi-check'" [label]="'Yes'"></app-button>
+  </ng-container>
+</app-modal-dialog>
+
+
+<!--<p>test</p>-->
+<!--<p>test2</p>-->

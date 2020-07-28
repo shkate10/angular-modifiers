@@ -1,0 +1,22 @@
+<p-confirmDialog #cd
+                 [header]="header"
+                 [class]="dialogStyleClass"
+                 [icon]="icon">
+  <p-footer>
+    <app-button [icon]="'pi pi-times'" [label]="'No'" (click)="cd.reject()"></app-button>
+    <app-button [icon]="'pi pi-check'" [label]="'Yes'" (click)="cd.accept()"></app-button>
+  </p-footer>
+</p-confirmDialog>
+
+
+<!--<p-confirmDialog #cd-->
+<!--                 class="dialog"-->
+<!--                 [appendTo]="'body'"-->
+<!--                 [header]="header"-->
+<!--                 [styleClass]="dialogStyleClass"-->
+<!--                 [icon]="icon">-->
+<!--  <p-footer>-->
+<!--    <app-button [icon]="'pi pi-times'" [label]="'No'" (click)="cd.reject()"></app-button>-->
+<!--    <app-button [icon]="'pi pi-check'" [label]="'Yes'" (click)="cd.accept()"></app-button>-->
+<!--  </p-footer>-->
+<!--</p-confirmDialog>-->

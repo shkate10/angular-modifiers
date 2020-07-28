@@ -1,0 +1,106 @@
+/* This will apply to all buttons.
+    - Appended to the body element is used - does not change anything
+    - If ENCAPSULATION.NONE is enabled, this does not work */
+
+//::ng-deep {
+//   .ui-button {
+//    background: lightseagreen !important;
+//    border-color: lightseagreen !important;
+//    text-transform: uppercase;
+//  }
+//}
+
+/* This will apply to the buttons in the dialog.
+    - Appended to the body element is used - does not change anything
+    - If ENCAPSULATION.NONE is enabled, this does not work */
+
+//::ng-deep {
+//  .ui-confirmdialog .ui-button {
+//    background: lightseagreen !important;
+//    border-color: lightseagreen !important;
+//    text-transform: uppercase;
+//  }
+//}
+
+/*  This will apply to the buttons in the dialog. This way is used in MM for the recipients dialog
+      - Appended to the body element is used
+      - Works if ENCAPSULATION.NONE is enabled */
+
+//.app-modal-dialog.second-dialog-container {
+//  .ui-button {
+//    background: lightseagreen !important;
+//    border-color: lightseagreen !important;
+//    text-transform: uppercase;
+//  }
+//}
+
+/*  This will apply to the buttons in the dialog.
+      - Appended to the body element is NOT used
+      - ENCAPSULATION.NONE is disabled
+
+      DOES NOT WORK */
+
+//.app-modal-dialog.second-dialog-container {
+//  ::ng-deep {
+//    .button .ui-button {
+//      background: lightseagreen !important;
+//      border-color: lightseagreen !important;
+//      text-transform: uppercase;
+//    }
+//  }
+//}
+
+/* In order to keep the styles only for this component we need to use host selector, but again this
+ will work if the dialog is NOT appended to the body */
+
+// a) all buttons
+//:host {
+//  ::ng-deep {
+//    .ui-button {
+//      background: lightseagreen;
+//      border-color: lightseagreen;
+//      text-transform: uppercase;
+//    }
+//  }
+//}
+
+/* b) buttons inside the dialog */
+
+//:host {
+//  .second-dialog-container {
+//    ::ng-deep {
+//      .ui-button {
+//        background: lightseagreen !important;
+//        border-color: lightseagreen !important;
+//        text-transform: uppercase;
+//      }
+//    }
+//  }
+//}
+
+
+/* In order to keep the styles only for this component we need to use
+   host selector, if the dialog is appended to the body */
+
+/* a) THIS WON'T WORK, because the host element is inside the root component */
+
+//:host {
+//  ::ng-deep {
+//    .ui-button {
+//      background: lightseagreen;
+//      border-color: lightseagreen;
+//      text-transform: uppercase;
+//    }
+//  }
+//}
+
+/* b)  Styles class + Encapsulation NONE - ng-deep
+       Also if we add the same class to the first dialog then the styles would apply there too */
+
+//.app-modal-dialog.second-dialog-container {
+//  .ui-dialog-footer .ui-button {
+//    background: lightseagreen;
+//    border-color: lightseagreen;
+//    text-transform: uppercase;
+//  }
+//}

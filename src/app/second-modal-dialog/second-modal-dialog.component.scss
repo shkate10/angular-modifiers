@@ -1,0 +1,77 @@
+.alert {
+  margin-bottom: 0;
+}
+
+// Apply to all button
+
+// a) Using with NG-DEEP
+// ::ng-deep {
+//  .ui-button {
+//    background: lightseagreen !important;
+//    border-color: lightseagreen !important;
+//    text-transform: uppercase;
+//  }
+// }
+
+// b) Using Encapsulation.None
+.ui-button {
+ background: lightseagreen !important;
+ border-color: lightseagreen !important;
+ text-transform: uppercase;
+}
+
+
+
+// Apply to the buttons inside the dialog
+
+//::ng-deep {
+//  .ui-dialog .ui-button {
+//    background: lightseagreen !important;
+//    border-color: lightseagreen !important;
+//    text-transform: uppercase;
+//  }
+//}
+
+
+
+// Save version with specific class added to the instance
+
+// a) Using NG-DEEP + specific class
+//::ng-deep {
+//  .second-modal-dialog {
+//    .ui-button {
+//      background: lightseagreen !important;
+//      border-color: lightseagreen !important;
+//      text-transform: uppercase;
+//    }
+//  }
+//}
+
+ //b) Using Encapsulation.NONE + specific class (all styles should be wrapped in the specific/custom class) - IN MM is used
+//.second-modal-dialog {
+//  .ui-button {
+//    background: lightseagreen !important;
+//    border-color: lightseagreen !important;
+//    text-transform: uppercase;
+//  }
+//}
+
+
+
+// Recommended if we want to add styles to the host element
+
+// This does not work with encapsulations none, the host does not know which one is the host, the special attribute is not
+// added in the style tag
+
+// :host {
+//   display: flex;
+//   justify-content: space-evenly;
+
+//  ::ng-deep {
+//    .second-modal-dialog .ui-button {
+//      background: lightseagreen !important;
+//      border-color: lightseagreen !important;
+//      text-transform: uppercase;
+//    }
+//  }
+// }

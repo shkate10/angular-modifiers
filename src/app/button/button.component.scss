@@ -1,0 +1,8 @@
+:host-context(.dark) {
+  ::ng-deep {
+    .ui-button {
+      background: #256a93;
+      border-color: #256a93;
+    }
+  }
+}

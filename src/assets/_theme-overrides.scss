@@ -1,0 +1,25 @@
+body {
+  .ui-dialog {
+    width: 500px;
+    .ui-dialog-content {
+      background: #f2f2f2;
+    }
+
+    &.ui-confirmdialog {
+     .ui-dialog-titlebar-icon {
+      margin-right: 0;
+     }
+
+      .ui-dialog-footer {
+        border: 1px solid #cbcbcb;
+      }
+    }
+
+    .ui-dialog-footer {
+      .button {
+        margin-left: 0.5em;
+      }
+    }
+  }
+}
+
